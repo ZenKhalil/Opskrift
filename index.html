@@ -1,103 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Opskrift</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
   </head>
-  <body>
+ <body>
+    <nav class="navbar">
+      <div class="logo">KEA's Opskrifter</div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">Om</a></li>
+        <li class="Opskrifter">
+          <a href="#">Tryk her for flere opskrifter</a>
+          <ul class="dropdown">
+            <li><a href="https://www.arla.dk/opskrifter/temaer/kager/">Kager</a></li>
+            <li><a href="https://www.arla.dk/opskrifter/vafler/">Vafler</a></li>
+            <li><a href="https://www.arla.dk/opskrifter/muffins-med-chokoladestykker/">Muffins</a></li>
+            <li><a href="https://www.arla.dk/opskrifter/cookies/">Cookies</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Pris</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+    <section>
+        <h2 class="title" id="titel">Gammelsdags pandekage</h2>
+      </section>
+    <div class="grid-container">
     <header>
-      <div class="skrift">
-        <h1>Opskrift</h1>
-      </div>
-      <h2>Gammelsdags pandekage</h2>
+      <img id="Pandekage" src="./images/pan.png" alt="Pandekage" style="width: 100%">
     </header>
     <nav>
-      <h3>25 MIN</h3>
-      <p>
-        En <del>sund</del> opskrift for en god morgenmad der er nem at lave, og
-        giver en et godt humør. Server det sammen med dit yndlingssyltetøj
-        (jordbær er altid et godt valg), lidt flødeskum og måske endda lidt
-        sirup karamel.
+   <div style="text-align: left;">
+        <img src="./images/tid.png" width="36" alt="tid" class="klokke">
+      </div>
+      <h3 class="tid">25 MIN</h3>
+      <p class="start">
+        En <del>sund</del> opskrift for en god morgenmad der er nem at lave, og giver en et godt humør. Server det sammen med dit yndlingssyltetøj (jordbær er altid et godt valg), lidt flødeskum og måske endda lidt sirup karamel.
       </p>
     </nav>
-    <!--Perhaps add icon of ingredients in the list-->
-    <img
-      src="https://www.recipetineats.com/wp-content/uploads/2017/06/Pancakes-featured.jpg"
-      alt="Pandekage"
-      style="float: right; width: 400px; height: 500px"
-    />
-    <section>
-      <article>
-        <b>INGREDIENSER</b>
-        <ul>
-          <img
+    <table class="INGREDIENSER">
+      <tbody>
+        <tr>
+          <tr><th>INGREDIENSER</th></tr>
+            <tr><td><img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh9vuFWBX9ajCpBl9RVHM1bpANem55y25sCA&usqp=CAU"
             alt="Hvedemel"
             style="float: left; width: 40px; height: 50px"
-          />
-          <li>Hvedemel 150 g</li>
-          <img
+          /></td><td> Hvedemel</td><td> 150g</td></tr>
+          <tr><td><img
             src="data:image/jpeg;base64,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"
             alt="Mælk"
             style="float: left; width: 20px; height: 50px"
-          />
-          <li>Mælk 400 ml</li>
-          <img
+          /></td><td> Mælk</td><td> 400 ml</td></tr>
+          <tr><td><img
             src="https://vegan.rocks/blog/butter-good-or-bad/feature_hu3705cca38a48047fac898e362089f219_55657_1200x1200_fill_q100_box_smart1.jpg"
             alt="Smør"
             style="float: left; width: 40px; height: 30px"
-          />
-          <li>Smør 50 g</li>
-          <img
+          /></td><td> Smør</td><td> 50 g</td></tr>
+          <tr><td><img
             src="https://freesvg.org/img/1324219812.png"
             alt="Egg"
             style="float: left; width: 30px; height: 30px"
-          />
-          <li>Æg 3 stk.</li>
-          <img
+          /></td><td> Æg</td><td> 3 stk.</td></tr>
+          <tr><td><img
             src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Fine_sea_salt.JPG"
             alt="Salt"
             style="float: left; width: 30px; height: 30px"
-          />
-          <li>Groft salt ½ tsk</li>
-        </ul>
-      </article>
-    </section>
-    <article>
-      <b>Tilbehør</b>
-      <ul>
-        <li>Flødeskum</li>
-        <li>syltetøj</li>
-      </ul>
-    </article>
-    <ol>
-      <li>
+          /></td><td> Groft salt</td><td>½ tsk</td></tr>
+        </tbody>
+      </table>
+      <div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/watch?v=FLd00Bx4tOk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+      <table class="Bage">
+        <tr><td id="frem">FREMGANGSMÅDE</td>
+        <ol>
+     <tr><td><li>
         Kom melet i en skål og pisk mælken i lidt efter lidt til en "klumpfri"
         jævning.
-      </li>
-      <li>Smelt smørret i en stegepande og kom det i blandingen.</li>
-      <li>
+      </li></td></tr>
+      <tr><td><li>Smelt smørret i en stegepande og kom det i blandingen.</li></td></tr>
+      <tr><td><li>
         Tilsæt æg og salt, pisk dejen godt igennem og lad den hvile i ca. ½
         time.
-      </li>
-      <li>
+      </li></td></tr>
+      <tr><td><li>
         Bag en pandekage ad gangen (½-¾ dl dej pr. pandekage) ved kraftig varme,
         ca. 1 min. på hver side, eller til de er gyldne.
-      </li>
-      <li>
+      </li></td></tr>
+      <tr><td><li>
         Hold pandekagerne varme under alufolie og gentag med resten af dejen.
-      </li>
-      <li>Server de lune pandekager med flødeskum og syltetøj.</li>
-    </ol>
-    <a href="https://www.arla.dk/opskrifter/vafler/"
-      >Klik her for en vaffel opskrift</a
-    >
+      </li></td></tr>
+      <tr><td><li>Server de lune pandekager med flødeskum og syltetøj.</li></td></tr>
+    </ol></tr>
+    </table>
+  
     <footer>
-      <h2><b>Næringsindhold</b></h2>
-      <h3><strong>Næringsindhold pr. 100g</strong></h3>
-      <h4>859 kJ / 205 kcal</h4>
+      <table class="Næringsindhold">
+        <tbody>
+          <div id="Nor"><tr>
+            <th>Næringsindhold pr. 100g <td><h4>859 kJ / 205 kcal</h4></strong></td> </th>
+          </tr></div>
+          <tr><th>ENERGIFORDELING</th>
+            <th>NÆRINGSINDHOLD PR. 100G </th></tr>
+            <tr><td>Fiber:</td><td>-</td><td>0.7g</td></tr>
+            <tr><td>Protein:</td><td>10%</td><td>5g</td></tr>
+            <tr><td>Kulhydrat:</td><td>41,2%</td><td>20.8g</td></tr>
+            <tr><td>Fedt:</td><td>48,8%</td><td>11,3g</td></tr>
+          </tbody>
+      </table>
+      
     </footer>
+<div class="review-container">
+  <div class="rating">
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+    <span class="star">&#9733;</span>
+  </div>
+  <p class="review-text">Dette er en FANTASTISK opskrift!</p>
+</div>
+</div>
   </body>
 </html>
+<a href="/"
+      >Klik her for mere info</a
+    >
